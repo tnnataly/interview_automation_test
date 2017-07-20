@@ -8,8 +8,8 @@ Farmdrop sometimes uses a staging site at [https://staging-web.farmdrop.com](htt
 ## Task
 Please build a suite of tests for the sign up form which will run against this staging site.
 
-2. Write out a series of scenarios as a Cucumber feature file(s). Try to think from regression prospective and come up with as many scenarios as you feel are appropriate in order to make sure this form is fully tested.
-3. Begin to automate your scenarios and continue until your allocated time runs out. Use Cucumber/Ruby and any other gems/frameworks you feel are appropriate.
+1. Write out a series of scenarios as a Cucumber feature file(s). Try to think from regression prospective and come up with as many scenarios as you feel are appropriate in order to make sure this form is fully tested.
+2. Begin to automate your scenarios and continue until your allocated time runs out. Use Cucumber/Ruby and any other gems/frameworks you feel are appropriate.
 
 ## Notes
 * Code reuse is important to us, so we are interested in seeing what approaches you take to keep your code and tests modular.
