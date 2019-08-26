@@ -1,0 +1,16 @@
+default_format:
+  --format pretty --color
+  --format rerun --out reports/rerun0.txt
+  --format html --out reports/report0.html
+  --format json --out reports/json/report0.json
+  --format AllureCucumber::Formatter --out reports/allure/report0
+
+default_chrome_stage:
+  --profile default_format
+  TEST_ENV=env_stage
+  BROWSER=chrome
+
+default_ie_stage:
+  --profile default_format
+  TEST_ENV=env_stage
+  BROWSER=internet_explorer

@@ -1,0 +1,6 @@
+.irb-history
+.idea/
+reports/*
+!features/*
+public/uploads
+Gemfile.lock

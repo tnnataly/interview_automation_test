@@ -1,0 +1,8 @@
+env_stage:
+  host: 'https://staging-web.farmdrop.com'
+  user1:
+    email: 'user1@mail.com'
+    user_password: 'user1user1'
+  user2:
+    email: 'user2@mail.com'
+    user_password: 'user2user2'
