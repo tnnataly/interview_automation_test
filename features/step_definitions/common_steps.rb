@@ -41,7 +41,12 @@ When(/^user fills in the form on Sign Up page with data:$/) do |table|
     row[:field_name] == 'mailing_list' ? @signup_page.radio_button_section(text: row[:value]).radio_button.click : @base_page.fill_in_field(row[:field_name], row[:value])
     waiting
   end
+end
 
+Then(/^user verifies validation message of (postcode|email|password) field:$/) do |field_name, table|
+#text
+  field_name = field_name == 'postcode' ? 'zipcode' : field_name
+  expect(@base_page.get_field(field_name).native["validationMessage"]).to eq(table.hashes.first[:text])
 end
 
  When(/^user (tries to submit|submits) Sign Up form$/) do |action|
@@ -55,8 +60,9 @@ Then(/^user verifies (.*) button is(n't|) displayed on the page$/) do |button_na
 end
 
 Then(/^user verifies text is displayed on the page:$/) do |text|
-  expect(@base_page.content.text).to include(text)
+   expect(@base_page.content.text).to include(text)
 end
+
 
 Then(/^user verifies error is displayed on Sign Up page:$/) do |text|
    expect(@signup_page.error_message.text).to eq(text)
