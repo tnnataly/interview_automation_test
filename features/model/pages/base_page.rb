@@ -5,7 +5,6 @@ require 'active_support'
 require 'active_support/core_ext'
 
 
-
 class BasePage < SitePrism::Page
 
   element :login_button, 'a[href="/login"]'
@@ -14,14 +13,19 @@ class BasePage < SitePrism::Page
 
   element :account_button, '[data-qaid="account-name"]'
   element :content, 'body'
+  element :frame, 'iframe'
 
   def refresh_page
     page.refresh
     waiting
   end
 
+  def get_field(id)
+    find("input##{id}")
+  end
+
   def fill_in_field(id, value)
-    find("input##{id}").set(value)
+    get_field(id).set(value)
     waiting
   end
 
